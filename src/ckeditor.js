@@ -24,15 +24,14 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table.js';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation.js';
-
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment'
-import Audio from '@funkymed/src/audio';
-import AudioUpload from '@funkymed/src/audioupload';
+import AudioEmbed from '@arifnurdiansyah92/ckeditor5-audio-embed/src/audioembed'
 
 class Editor extends ClassicEditor {}
 
 // Plugins to include in the build.
 Editor.builtinPlugins = [
+	AudioEmbed,
 	Autoformat,
 	BlockQuote,
 	Bold,
@@ -54,15 +53,14 @@ Editor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
-	Alignment,                                               
-	Audio,
-	AudioUpload
+	Alignment
 ];
 
 // Editor configuration.
 Editor.defaultConfig = {
 	toolbar: {
 		items: [
+			'audioEmbed',
 			'heading',
 			'|',
 			'bold',
@@ -100,7 +98,12 @@ Editor.defaultConfig = {
 			'tableRow',
 			'mergeTableCells'
 		]
+	},
+	htmlEmbed: {
+		showPreviews: true
 	}
 };
+
+
 
 export default Editor;

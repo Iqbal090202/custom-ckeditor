@@ -7,6 +7,7 @@
   "private": true,
   "main": "./build/ckeditor.js",
   "devDependencies": {
+    "@arifnurdiansyah92/ckeditor5-audio-embed": "github:arifnurdiansyah92/ckeditor5-audio-embed",
     "@ckeditor/ckeditor5-alignment": "^36.0.1",
     "@ckeditor/ckeditor5-autoformat": "^36.0.1",
     "@ckeditor/ckeditor5-basic-styles": "^36.0.1",
@@ -27,7 +28,6 @@
     "@ckeditor/ckeditor5-table": "^36.0.1",
     "@ckeditor/ckeditor5-theme-lark": "^36.0.1",
     "@ckeditor/ckeditor5-typing": "^36.0.1",
-    "@funkymed/": "funkymed/ckeditor5-audio",
     "css-loader": "5",
     "postcss": "^8.4.21",
     "postcss-loader": "^4.3.0",
@@ -41,6 +41,7 @@
     "build": "webpack --mode development"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-html-embed": "^36.0.1",
     "funkymed-ckeditor5-audio": "funkymed/ckeditor5-audio"
   }
 }
